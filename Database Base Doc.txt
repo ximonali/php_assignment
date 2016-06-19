@@ -1,13 +1,8 @@
 Table: student
-
 - student_id (int PK AI)
-
 - first_name (varchar 50)
-
 - last_name (varchar 50)
-
 - email (varchar 200)
-
 - password (varchar 50)
 - phone (varchar 20)
 - address (varchar 250)
@@ -15,80 +10,49 @@ Table: student
 - date_add (date/time)
 
 Table: test
-
 - test_id (int PK AI)
-
 - name (varchar 50)
-
 - description (varchar 100)
-
 - total_question (int)
-
 - pass_score (int)
 - time (int)
 - status (bit)
-
 - date_add (date time)
 
-
 Table: question
-
 - question_id (int PK AI)
-
 - test_id (int FK)
-
 - question (varchar 250)
 - status (bit)
 - date_add (date/time)
 
 Table: question_option
-
 - question_option_id (int PK AI)
-
 - question_id (int FK)
-
 - correct_option (bit) //True or False
-
 - status (bit)
-
 - date_add (date/time)
 
 Table: student_test
-
 - student_test_id (int PK AI)
-
 - student_id (int FK)
-
 - test_id (int FK)
-
 - score (int)
-
 - status (bit)
-
 - date_start (date/time)
 - date_end (date/time)
 
 Table: student_test_answer
-
 - student_test_answer_id (int PK AI)
-
 - student_test_id (int FK)
-
 - question_option_id (int FK)
 - date_add (date/time)
 
 Table: user
-
 - user_id (int PK AI)
-
 - first_name (varchar 50)
-
 - last_name (varchar 50)
-
 - email (varchar 200)
-
 - password (varchar 50)
-
 - status (bit)
-
 - date_add (Date/Time)
