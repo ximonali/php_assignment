@@ -1,10 +1,14 @@
 <?php
 	class ControllerStudentRegister extends Controller {
 		function index() {
-			$this->load('view/common/header');
-			$this->load('view/student/Register');
-			$this->load('view/common/footer');
+			include('view/common/header.php');
+			include('view/student/register.php');
+			include('view/common/footer.php');			
+		}
+
+		function insertStudent() {
 
 		}
+
 	}
 ?>

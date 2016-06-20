@@ -2,13 +2,14 @@
 class ModelStudentStudent extends Model {
 	
 	function login($email, $password) {
-
+		return false;
 	}
 
-	function getStudents() {
-		$students = $this->query("SELECT * FROM words");
+	function getAllStudents() {
+		$students = $this->query("SELECT * FROM student");
 		return $students->rows;
 	}
+
 
 	function getStudent($student_id) {
 		$student = $this->db->query("SELECT * FROM student WHERE student_id = '" . (int)$student_id . "'");

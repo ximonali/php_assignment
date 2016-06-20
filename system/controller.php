@@ -1,8 +1,5 @@
 <?php
 class Controller {
-	private $header;
-	private $footer;
-
 		function load($url) {
 			require($url . '.php');
 		}

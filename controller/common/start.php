@@ -2,9 +2,9 @@
 	class ControllerCommonStart extends Controller {
 		function index() {
 			$this->load('model/student/student');
-			$this->load('view/common/header');
-			$this->load('view/common/start');
-			$this->load('view/common/footer');
+			include('view/common/header.php');
+			include('view/common/start.php');
+			include('view/common/footer.php');			
 		}
 	}
 ?>

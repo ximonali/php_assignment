@@ -1,6 +1,6 @@
 <?php
 class ModelStudentTest extends Model {
-	function getTests() {
+	function getAllTests() {
 		$student_id = $this->student->getID();
 		$tests = $this->query("SELECT * FROM test where student_id = '" . (int)$student_id . "'");
 		return $tests->rows;

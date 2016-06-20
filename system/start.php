@@ -1,5 +1,5 @@
 <?php
-class start {
+class Start {
 	private $route;
 	private $controller;
 	private $method;
@@ -19,7 +19,7 @@ class start {
 		if (isset($_GET['route'])) {
 			$route = $_GET['route'];
 		} else {
-			$route = "common/start";
+			$route = "common/dashbord";
 		}
 
 		if (isset($_GET['method'])) {

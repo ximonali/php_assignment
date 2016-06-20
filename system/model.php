@@ -13,10 +13,6 @@ class Model {
 		return $this->db->real_escape_string($value);
 	}
 
-	function countAffected() {
-		return $this->db->affected_rows;
-	}
-
 	function getLastId() {
 		return $this->db->insert_id;
 	}
