@@ -3,11 +3,16 @@
         <p class="lead">The perfect solution to approve MAD3134 - 44 successfully.<br></p>
       </div>
 
-      <form class="form-signin" action="login.php" method="post">
+
+
+      <form class="form-signin" action="?route=student/login&method=login" method="post">
+        <?php if (isset($errorMsg)) { ?>
+          <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <?=$errorMsg;?>
+          </div>
+        <?php } ?>
         <h2 class="form-signin-heading">Please sign in</h2>
-        <?php if (isset($errorMsg)) {
-          echo $errorMsg;
-        } ?>
         <label for="email" class="sr-only">Email address</label>
         <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="password" class="sr-only">Password</label>

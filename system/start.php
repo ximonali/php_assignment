@@ -5,7 +5,6 @@ class Start {
 	private $method;
 	private $parameter;
 	private $db;
-	private $student;
 
 	function init() {
 		require('config.php');
@@ -13,22 +12,25 @@ class Start {
 		require('system/controller.php');
 		require('system/model.php');
 		require('system/student.php');
-
-		$student = new Student();
+		session_start();
 
 		if (isset($_GET['route'])) {
 			$route = $_GET['route'];
 		} else {
-			$route = "common/dashbord";
+			$route = "common/dashboard";
 		}
 
-		if (isset($_GET['method'])) {
+		if (isset($_POST['method'])) {
+			$method = $_POST['method'];
+		} else if (isset($_GET['method'])) {
 			$method = $_GET['method'];
 		} else {
 			$method = "index";
 		}
 
-		if (isset($_GET['parameter'])) {
+		if (isset($_POST['parameter'])) {
+			$parameter = $_POST['parameter'];
+		} else if (isset($_GET['parameter'])) {
 			$parameter = $_GET['parameter'];
 		} else {
 			$parameter = "";

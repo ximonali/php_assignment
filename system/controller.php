@@ -1,5 +1,10 @@
 <?php
 class Controller {
+	public $studentLog;
+		public function __construct() {
+			$this->studentLog = new Student();
+		}
+		
 		function load($url) {
 			require($url . '.php');
 		}

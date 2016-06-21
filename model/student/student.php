@@ -2,7 +2,8 @@
 class ModelStudentStudent extends Model {
 	
 	function login($email, $password) {
-		return false;
+		$student = $this->query("SELECT * FROM student WHERE email = '" . $email . "' and password='" . $password . "'");
+		return $student->row;
 	}
 
 	function getAllStudents() {
