@@ -4,19 +4,19 @@ class student {
 	private $last_name;
 	private $student_id;
 
-	function isLogged() {
+	public function isLogged() {
 		return isset($this->student_id);
 	}
 
-	function getId() {
+	public function getId() {
 		return $this->student_id;
 	}
 
-	function getName() {
-		return $this->firstname . ' ' . $this->lastname;
+	public function getName() {
+		return $this->first_name . ' ' . $this->last_name;
 	}
 
-	function setStudent($data) {
+	public function setStudent($data) {
 		if (isset($data['student_id'])) {
 			$this->student_id = $data['student_id'];
 		} else {
@@ -33,8 +33,9 @@ class student {
 			$this->last_name = $data['last_name'];
 		} else {
 			$this->last_name = "";
-		}		
-		
+		}
+
+		session_start();
 		$_SESSION['student'] = $this;
 	}	
 }

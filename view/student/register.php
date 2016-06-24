@@ -2,7 +2,7 @@
         <h1>Register at LOCP</h1>
         <p class="lead">The perfect solution to approve MAD3134 - 44 successfully.<br><br></p>
       </div>
-		<form role="form" action="register.php" method="post">
+		<form role="form" action="?route=student/register&method=insert" method="post">
       <div class="form-group">
         <label for="first_name">Name:</label>
         <input type="text" class="form-control" id="first_name" name="first_name" required>

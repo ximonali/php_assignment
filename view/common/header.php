@@ -49,7 +49,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <?php if (!$this->studentLog->isLogged()) { ?>
+            <?php if ($this->student->isLogged()) { ?>
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="?route=student/login&method=logout">Logout</a></li>

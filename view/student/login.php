@@ -19,7 +19,7 @@
         <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
         <div id="go2register">
           <label>
-            <a href="register.html">or Register</a>
+            <a href="?route=student/register">Sign Up Now</a>
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>

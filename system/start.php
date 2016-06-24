@@ -12,7 +12,6 @@ class Start {
 		require('system/controller.php');
 		require('system/model.php');
 		require('system/student.php');
-		session_start();
 
 		if (isset($_GET['route'])) {
 			$route = $_GET['route'];
@@ -36,9 +35,16 @@ class Start {
 			$parameter = "";
 		}
 
+		$student = new Student();
+		session_start();
+		if (isset($_SESSION['student'])) {
+			$student = $_SESSION['student'];
+		}
+
 		require('controller/' . $route . '.php');
 		$class = 'Controller' . preg_replace('/[^a-zA-Z0-9]/', '', $route);
 		$controller = new $class();
+		$controller->student = $student;
 
 		if (is_callable(array($controller, $method))) {
 			return call_user_func(array($controller, $method), $parameter);
