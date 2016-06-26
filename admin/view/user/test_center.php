@@ -5,68 +5,42 @@
 
       <div class="container">
       <h3>Test List</h3>
-		<ul>
-			<?php foreach ($userTest as $test) : ?>
-			<li> <?php echo $test['name'] . " " . $test['description']; ?> </li>
-			<?php endforeach; ?>
-		</ul>
+      <br>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Course Name</th>
-        <th>Description</th>
-        <th>Duration</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="success">
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td> 
-          <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span> Del
-          </button>
+        <table class="table table-bordered">
+          <thead align="left" style="display: table-header-group">
+          <tr class="info">
+                <th>Item</th>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Time (min)</th>
+                <th>Score (pts)</th>
+                <th>Action</th>
+          </tr>
+          </thead>
+        <tbody>
+        <?php 
+        $total = 0;
+        foreach ($userTest as $rows) :?>
+          <tr class="item_row">
+                <td><?php echo ++$total; ?></td>
+                <td> <?php echo $rows['name']; ?></td>
+                <td> <?php echo $rows['description']; ?></td>
+                <td> <?php echo $rows['time']; ?></td>
+                <td> <?php echo $rows['pass_score']; ?></td>
+                <td>
+                  <button type="button" class="btn btn-default btn-xs">
+                  <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span> Del
+                  </button>
 
-          <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
-          </button>
-        </td>
-      </tr>
-      <tr class="danger">
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-        <td>
-          <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span> Del
-          </button>
-
-          <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
-          </button>
-
-        </td>
-      </tr>
-      <tr class="info">
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>
-          <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span> Del
-          </button>
-
-          <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+                  <button type="button" class="btn btn-default btn-xs">
+                  <span class="glyphicon glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span> Edt
+                  </button>
+                </td>
+          </tr>
+        <?php endforeach;?>
+        </tbody>
+        </table>
 
 
       </div>
