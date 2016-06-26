@@ -48,7 +48,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="../index.php">Home</a></li>
+            <li class="active"><a href="index.php">Home</a></li>
             <?php if ($this->user->isLogged()) { ?>
                <!-- route=user/login&method=logout 
                   route = path
@@ -56,7 +56,7 @@
                   login = file
                   method (logout) = function
                -->
-              <li><a href="?route=user/test_center&method=test_center">Test Center</a></li>
+              <li><a href="?route=user/test_center">Test Center</a></li>
               <li><a href="?route=user/statistics&method=statistics">Statistics</a></li>
               <li><a href="?route=user/current_test&method=current_test">Current Tests</a></li>
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
