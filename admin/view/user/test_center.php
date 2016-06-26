@@ -6,7 +6,19 @@
       <div class="container">
       <h3>Test List</h3>
       <br>
+      <div id="menu_option" align="right"> 
+                  <button type="summit" onclick="?route=user/test_center&method=showTestForm" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Course
+                  </button>
 
+                  <br>
+                  <br>
+                  <a href="?route=user/test_center&method=showTestForm">Add Course</a>
+                  <!-- <a href="?route=user/statistics&method=statistics">Statistics</a> -->
+
+
+      </div>
+      <br>
         <table class="table table-bordered">
           <thead align="left" style="display: table-header-group">
           <tr class="info">
